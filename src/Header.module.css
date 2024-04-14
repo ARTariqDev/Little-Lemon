@@ -1,0 +1,44 @@
+.header {
+  background-color: black;
+  display: flex; /* Make elements horizontally aligned */
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center; /* Vertically center elements */
+  padding: 1rem; /* Add some padding */
+  color: white; /* Text color for header */
+  height: 4em;
+  position: sticky; /* Make header sticky */
+  top: 0; /* Position at the top of the viewport */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  z-index: 30;
+}
+
+.nav {
+  display: flex; /* Make icons align horizontally */
+}
+
+.nav a {
+  margin-left: 1rem; /* Add spacing between icons/links */
+}
+
+h2 {
+  margin: 0; /* Remove default margin from heading */
+  text-align: center; /* Center the heading text */
+  /* Adjust flow styling as needed (optional) */
+}
+
+/* Style the icons specifically */
+.socialIcon,
+.contactIcon {
+  font-size: 2rem; /* Make icons larger */
+  color: white; /* Make icons white */
+  margin-right: 1rem; /* Add some margin to the right */
+}
+
+p {
+  font-weight: bold;
+}
+
+/* Hide header on scroll up (opacity 0) */
+.header[data-scroll="up"] {
+  opacity: 0;
+}
