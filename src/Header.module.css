@@ -1,44 +1,83 @@
 .header {
-  background-color: black;
-  display: flex; /* Make elements horizontally aligned */
-  justify-content: space-between; /* Distribute space evenly */
-  align-items: center; /* Vertically center elements */
-  padding: 1rem; /* Add some padding */
-  color: white; /* Text color for header */
-  height: 4em;
-  position: sticky; /* Make header sticky */
-  top: 0; /* Position at the top of the viewport */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  background-color: #495E57;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: black;
+  height: auto;
+  position: sticky;
+  top: 0;
+  transition: opacity 0.3s ease-in-out;
   z-index: 30;
 }
 
 .nav {
-  display: flex; /* Make icons align horizontally */
+  display: flex;
 }
 
 .nav a {
-  margin-left: 1rem; /* Add spacing between icons/links */
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: white; /* Change link color to white */
 }
 
 h2 {
-  margin: 0; /* Remove default margin from heading */
-  text-align: center; /* Center the heading text */
-  /* Adjust flow styling as needed (optional) */
+  margin: 0;
 }
 
-/* Style the icons specifically */
 .socialIcon,
 .contactIcon {
-  font-size: 2rem; /* Make icons larger */
-  color: white; /* Make icons white */
-  margin-right: 1rem; /* Add some margin to the right */
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 1rem;
 }
 
 p {
   font-weight: bold;
 }
 
-/* Hide header on scroll up (opacity 0) */
 .header[data-scroll="up"] {
   opacity: 0;
 }
+
+/* Hide hamburger icon on desktop */
+@media (min-width: 769px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: #495E57;
+    padding: 1rem;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Style mobile links */
+  .mobileNav a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+  }
+}
+
+.nav a:hover {
+  color: #ccc;
+}
+

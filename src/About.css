@@ -1,0 +1,31 @@
+#cont {
+    padding: 1em;
+    height: 40em;
+    background-color: #495E57;
+    color: #F4CE14;
+}
+
+#About {
+    color: #FFFFFF;
+    margin-left: 16.5em;
+}
+
+h2 {
+    font-size: 34pt;
+    margin-left: 11em;
+}
+
+h3 {
+    margin-left: 14.2em;
+}
+
+#A, #B {
+    margin-left: 15em;
+    margin-right: auto;
+    height: 45%;
+    border-radius: 55px;
+    -webkit-border-radius: 55px;
+    -moz-border-radius: 55px;
+    -ms-border-radius: 55px;
+    -o-border-radius: 55px;
+}

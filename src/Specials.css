@@ -1,0 +1,22 @@
+.card .card-header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Name, Price */
+    align-items: center; /* Align vertically */
+    padding: 1em; /* Add padding for spacing */
+  }
+
+  #price {
+    color: #EE9972;
+  }
+
+  #name {
+    font-size: 18pt;
+  }
+
+#text {
+    font-size: 20pt;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
+    max-width: 26ch;
+}

@@ -1,0 +1,38 @@
+h1 {
+    margin-left: auto;
+    font-size: 40pt;
+    font-family: "Markazi Text Medium";
+    color: #F4CE14;
+}
+
+h4 {
+    font-family: "Karla Regular";
+    font-size: 18pt;
+    color: #495E57;
+    margin-top: -1.5em;
+}
+
+p {
+    font-family: "Karla Regular",sans-serif;
+    font-weight: normal;
+    color: #333333;
+    max-width: 65ch;
+}
+
+button {
+    width: 30%;
+    height: 10%;
+    background-color: #333333;
+    border-radius: 10pt;
+    -webkit-border-radius: 10pt;
+    -moz-border-radius: 10pt;
+    -ms-border-radius: 10pt;
+    -o-border-radius: 10pt;
+    color: #EDEFEE;
+    font-weight: bold;
+}
+
+button :hover {
+    color: #cccc;
+    text-decoration: underline;
+}
