@@ -1,14 +1,9 @@
 import React, { useRef, useState } from 'react';
 import styles from './Header.module.css';
+import { HashLink } from 'react-router-hash-link'; // Import HashLink
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu visibility
-
-  const scrollToSection = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen); // Toggle mobile menu state
@@ -20,12 +15,12 @@ const Header = () => {
 
       {/* Navigation for larger screens */}
       <nav className={`${styles.nav} ${styles.desktopNav}`}>
-        <a href="#" className={styles.contactIcon}>Home</a>
-        <a href="#" className={styles.contactIcon}>About</a>
-        <a href="#" className={styles.contactIcon}>Menu</a>
-        <a href="#" className={styles.contactIcon}>Reservations</a>
-        <a href="#" className={styles.contactIcon}>Online Order</a>
-        <a href="#" className={styles.contactIcon}>Login</a>
+        <HashLink to="/" smooth className={styles.contactIcon}>Home</HashLink>
+        <HashLink to="/about#about" smooth className={styles.contactIcon}>About</HashLink>
+        <HashLink to="/menu" smooth className={styles.contactIcon}>Menu</HashLink> 
+        <HashLink to="/reservations" smooth className={styles.contactIcon}>Reservations</HashLink>
+        <HashLink to="/order" smooth className={styles.contactIcon}>Online Order</HashLink>
+        <HashLink to="/login" smooth className={styles.contactIcon}>Login</HashLink> {/* Fixed closing bracket */}
       </nav>
 
       {/* Hamburger icon for mobile navigation */}
@@ -38,12 +33,12 @@ const Header = () => {
       {/* Mobile navigation (conditional rendering) */}
       {isMobileMenuOpen && (
         <nav className={`${styles.mobileNav} ${styles.mobileMenu}`}>
-          <a href="#" className={styles.mobileNavItem}>Home</a>
-          <a href="#" className={styles.mobileNavItem}>About</a>
-          <a href="#" className={styles.mobileNavItem}>Menu</a>
-          <a href="#" className={styles.mobileNavItem}>Reservations</a>
-          <a href="#" className={styles.mobileNavItem}>Online Order</a>
-          <a href="#" className={styles.mobileNavItem}>Login</a>
+          <HashLink to="/" smooth className={styles.mobileNavItem}>Home</HashLink>
+          <HashLink to="/about#about" smooth className={styles.mobileNavItem}>About</HashLink>
+          <HashLink to="/menu" smooth className={styles.mobileNavItem}>Menu</HashLink>
+          <HashLink to="/reservations" smooth className={styles.mobileNavItem}>Reservations</HashLink>
+          <HashLink to="/order" smooth className={styles.mobileNavItem}>Online Order</HashLink>
+          <HashLink to="/login" smooth className={styles.mobileNavItem}>Login</HashLink>
         </nav>
       )}
     </header>
